@@ -291,6 +291,147 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/02/20190802/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/02/20190802/" itemprop="url">20190802软考笔记四</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-02T20:36:52+08:00">
+                2019-08-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="安全测试与评估熟记知识"><a href="#安全测试与评估熟记知识" class="headerlink" title="安全测试与评估熟记知识"></a>安全测试与评估熟记知识</h1><h4 id="1-客户端USB-Key测试的基本测试点："><a href="#1-客户端USB-Key测试的基本测试点：" class="headerlink" title="1.客户端USB Key测试的基本测试点："></a>1.客户端USB Key测试的基本测试点：</h4><p><strong>(1)功能测试</strong><br>①是否支持AES、RSA等常用加解密算法。<br>②是否提供外部接口以支持用户证书及私钥的导入。<br>③是否提供外部接口支持将数据传入Key内，经过公钥/私钥计算后导出。<br>④是否能实现USB Key插入状态实时监测，当USB Key意外拔出时是帝能自动锁定用户状态。<br>⑤是否使用口令进行保护。<br><strong>(2)性能测试</strong><br>①是否具备私钥不能导出的基本安全特性。<br>②Key内加解密算法的执行效率是否满足系统最低要求。</p>
+<h4 id="2-密钥管理功能的基本测试点："><a href="#2-密钥管理功能的基本测试点：" class="headerlink" title="2.密钥管理功能的基本测试点："></a>2.密钥管理功能的基本测试点：</h4><p><strong>(1)功能测试 </strong><br>①系统是否具备密钥生成、密钥发送、密钥存储、密钥查询、密钥撤销、密钥恢复等基本功能；<br>②密钥库管理功能是否完善；<br>③密钥管理中心的系统、设备、数据、人员等安全管理是否严密；<br>④密钥管理中心的审计、认证、恢复、统计等系统管理是否具备；<br>⑤密钥管理系统与证书认证系统之间是否采用基于身份认证的安全通信协议。<br><strong>(2)性能测试</strong><br>①检查证书服务器的处理性能是否具备可伸缩配置及扩展能力利用并发压力测试工具测试受理点连接数、签发在用证书数目、密钥发放并发请求数是否满足业务需求；<br>②测试是否具备系统所需最大量的密钥生成、存储、传送、发布、归档等密钥管理功能；<br>③是否支持密钥用户要求年限的保存期；<br>④是否具备异地容灾备份；<br>⑤是否具备可伸缩配置及扩展能力；<br>⑥关键部分是否采用双机热备和磁盘镜像。</p>
+<h4 id="3-加解密服务功能的基本测试点：（密码服务系统）"><a href="#3-加解密服务功能的基本测试点：（密码服务系统）" class="headerlink" title="3.加解密服务功能的基本测试点：（密码服务系统）"></a>3.加解密服务功能的基本测试点：（密码服务系统）</h4><p><strong>(1)功能测试</strong><br>①系统是否具备基础加解密功能；<br>②能否为应用提供相对稳定的统一安全服务接口；<br>③能否提供对多密码算法的支持；<br>④随着业务量的逐渐增加，是否可以灵活增加密码服务模块，实现性能平滑扩展。<br><strong>(2)性能测试</strong><br>①各加密算法使用的密钥长度是否达到业内安全的密钥长度；<br>②RSA、ECC等公钥算法的签名和验证速度以及AES等对称密钥算法的加解密速度是否满足业务要求；<br>③处理性能如公钥密码算法签名等是否具备可扩展能力。</p>
+<h4 id="4-对口令认证机制测试应包含的基本测试点："><a href="#4-对口令认证机制测试应包含的基本测试点：" class="headerlink" title="4.对口令认证机制测试应包含的基本测试点："></a>4.对口令认证机制测试应包含的基本测试点：</h4><p>①对用户名称测试的主要测试点在于测试用户名称的唯一性，即测试同时存在的用户名称在不考虑大小写的情况下，不能够同名。<br>②对用户口令测试应主要测试用户口令是否满足当前流行的控制模式。主要测试点应包括最大/最小口令时效、口令历史、最小口令长度、口令复杂度、加密选项及口令锁定等。</p>
+<h4 id="5-证书服务器测试的基本测试点："><a href="#5-证书服务器测试的基本测试点：" class="headerlink" title="5.证书服务器测试的基本测试点："></a>5.证书服务器测试的基本测试点：</h4><p><strong>(1)功能测试</strong><br>①系统是否提证书的申请、审核、签发与管理功能。<br>②系统是否提供证书撤销列表的发布和管理等功能。<br>③系统是否提供证书认证策略及操作管理策略、自身证书安全管理等管理服务。<br>④是否可以提供加密证书和签名证书。<br>⑤证书格式是否采用标准X.509格式。<br><strong>(2)性能测试</strong><br>①检查证书服务器的处理性能是否具备可伸缩配置及扩展能力。<br>②关键部分是否采用双机热备和磁盘镜像等安全机制。<br>③是否满足系统的不间断运行、在线故障恢复和在线系统升级的需要。<br>④是否满足需求中预测的最大数景用户正常访问需求，且是否具备3〜4倍冗余，并根据需要测试证书服务器的并发处理能力。</p>
+<h4 id="6-对该系统安全审计功能设计的测试点应包括："><a href="#6-对该系统安全审计功能设计的测试点应包括：" class="headerlink" title="6.对该系统安全审计功能设计的测试点应包括："></a>6.对该系统安全审计功能设计的测试点应包括：</h4><p>①能否进行系统数据收集，统一存储，集中进行安全审计<br>②是否支持基于PKI的应用审计<br>③是否支持基于XML等的审计数据采集协议<br>④是否提供灵活的自定义审计规则</p>
+<h4 id="7-针对防火墙的测试点："><a href="#7-针对防火墙的测试点：" class="headerlink" title="7.针对防火墙的测试点："></a>7.针对防火墙的测试点：</h4><p>(1)是否支持交换和路由两种工作模式；<br>(2)是否支持对FTP、HTTP、SMTP等服务类型的访问控制；<br>(3)是否考虑防火墙的冗余设计；<br>(4)是否支持对日志的统计分析功能，日志是否可存储在本地或网络数据库中；<br>(5)对防火墙或受保护内网的非法攻击，是否提供多种告警方式和多种级别的告警。</p>
+<h4 id="8-侵检测系统的测试点："><a href="#8-侵检测系统的测试点：" class="headerlink" title="8.侵检测系统的测试点："></a>8.侵检测系统的测试点：</h4><p>①能否在检测到入侵事件时，自动执行切断服务、记录入侵过程、报瞥等动作；<br>②是否支持攻击特征信息的集中式发布和攻击取证信息的分布式上载；<br>③能否提供多种方式对监视引擎和检测特征进行定期更新；<br>④内置的网络能否使用状态监控工具或网络监听工具。</p>
+<h4 id="9-病毒防治的测试点："><a href="#9-病毒防治的测试点：" class="headerlink" title="9.病毒防治的测试点："></a>9.病毒防治的测试点：</h4><p>（1）能否支持多种平台的病毒防治；<br>（2）能否支持对服务器的病毒防治；<br>（3）能否支持对电子邮件附件的病毒防治；<br>（4）能否提供对病毒特征信息和检测引擎的定期在线更新服务；<br>（5）防病毒范围是否广泛，是否包括UNIX、Windows、Linux系统等操作系统。</p>
+<h4 id="10-安全审计的测试点："><a href="#10-安全审计的测试点：" class="headerlink" title="10.安全审计的测试点："></a>10.安全审计的测试点：</h4><p>（1）能否进行系统数据收集，统一存储，集中进行安全审计；<br>（2）是否支持基于PKI的应用审计；<br>（3）是否支持基于XML的审计数据采集协议；<br>（4）是否提供灵活的自定义审计规则。</p>
+<h4 id="11-Web信息防篡改系统的测试点："><a href="#11-Web信息防篡改系统的测试点：" class="headerlink" title="11.Web信息防篡改系统的测试点："></a>11.Web信息防篡改系统的测试点：</h4><p>（1）是否支持多种操作系统；<br>（2）是否具有集成发布与监控功能，使系统能够区分合法更新与非法篡改；<br>（3）是否可以实时发布和备份；<br>（4）是否具备自动监控、自动恢复、自动报警的能力；<br>（5）是否提供日志管理、扫描策略管理和更新管理。</p>
+<h4 id="12-故障恢复与容灾备份测试点："><a href="#12-故障恢复与容灾备份测试点：" class="headerlink" title="12.故障恢复与容灾备份测试点："></a>12.故障恢复与容灾备份测试点：</h4><p>①故障恢复：测试整个ERP系统是否存在单点故障；任何一台设备失效时，能否按照预定义的规则实现快速切换；是否采用磁盘镜像技术，实现主机系统到磁盘系统的高速连接。<br>②数据备份：ERP系统关键业务是否具备必要的双机热备或磁盘镜像等热备份机制；对于整个ERP业务，是否提供外部存储器备份和恢复机制，保证系统能够根据备份策略恢复到指定时间的状态。<br>③容灾备份：ERP系统是否建立异地容灾备份中心，当主中心发生灾难性事件时，可由备份中心接管所有务；备份中心是否有足够的带宽确保与主中心的数据同步，是否有足够处理能力来接管主中心的业务，能否确保快速可靠地与主中心的应用切换。</p>
+<h4 id="13-用户权限控制测试点："><a href="#13-用户权限控制测试点：" class="headerlink" title="13.用户权限控制测试点："></a>13.用户权限控制测试点：</h4><p>(1)对用户权限控制体系合理性的评价：是否采用系统管理员、业务领导、操作人员三级分离的管理模式；用户名称是否具有唯一性，口令的强度及口令存储的位置和加密强度等。<br>(2)对用户权限分配合理性的评价：用户权限系统本身权限分配的细致程度；特定权限用户访问系统功能的能力测试。</p>
+<h4 id="14-操作系统安全性的测试点："><a href="#14-操作系统安全性的测试点：" class="headerlink" title="14.操作系统安全性的测试点："></a>14.操作系统安全性的测试点：</h4><p>(1)是否关闭或卸载了不必要的服务和程序<br>(2)是否存在不必要的账户<br>(3)权限设置是否合理<br>(4)安装相应的安全补丁程序的情况<br>(5)操作系统日志管理等</p>
+<h4 id="15-数据库权限的测试点："><a href="#15-数据库权限的测试点：" class="headerlink" title="15.数据库权限的测试点："></a>15.数据库权限的测试点：</h4><p>(1)数据库管理用户的设置应当注意对账号的保护，超级用户的口令不得为空或默认口令，对数据库的账号和组的权限作相应设置，撤销不必要的权限<br>(2)数据库中关于应用软件用户权限和口令存储的相关表格，尽量采用加密算法进行加密<br>(3)根据不同程序访问数据库的功能，应使用不同的数据库用户进行连接，且必须设置复杂的密码</p>
+<h4 id="16-安全日志测试点："><a href="#16-安全日志测试点：" class="headerlink" title="16.安全日志测试点："></a>16.安全日志测试点：</h4><p>日志应当记录所有用户访问系统的操作内容，包括登录用户名称、登录时间、浏览数据动作、修改数据动作、删除数据动作、退出时间、登录机器的IP等。</p>
+<h4 id="17-通信加密内容和测试点：（与3区别）"><a href="#17-通信加密内容和测试点：（与3区别）" class="headerlink" title="17.通信加密内容和测试点：（与3区别）"></a>17.通信加密内容和测试点：（与3区别）</h4><p>通信加密是保证数据在传输过程中数据的保密性和一致性的测试。目前使用的加密技术包括：VPN技术、对称加密算法、非对称加密算法、HASH算法等。VPN通常用于实现通信链路的加密，加密强度高，多用于广域网中的数据安全传输，操作复杂；RSA\DSA\DES等主要用于解决数据的保密性传输；HASH算法的目的在于保护数据内容的一致性，防止篡改。<br>(1) 保证软件产品确实在开发过程中，按照设计要求使用上述方法（具体算法）进行通信加密<br>(2) 各加密算法的加密强度是否符合通信要求<br>(3) 如果使用自定义的加密函数，应当使用破解技术对算法本身的加密强度进行论证。</p>
+<h4 id="18-电子商务平台、系统类平台常见安全攻击手段："><a href="#18-电子商务平台、系统类平台常见安全攻击手段：" class="headerlink" title="18.电子商务平台、系统类平台常见安全攻击手段："></a>18.电子商务平台、系统类平台常见安全攻击手段：</h4><p>(1) 网络侦听：指在数据通信或数据交互的过程中，攻击者对数据进行截取分析，从而实现对包括用户支付账号及口令数据的非授权获取和使用。<br>(2) 冒充攻击：攻击者采用口令猜测、消息重演与篡改等方式，伪装成另一个实体，欺骗安全中心的认证及授权服务，从而登录系统，获取对系统的非授权访问。<br>(3) 拒绝服务攻击：攻击者通过对网络协议的实现缺陷进行故意攻击，或通过野蛮手段耗尽被攻击对象的资源，使电子商务平台中包括安全中心在内的关键服务停止响应甚至崩溃，从而使系统无法提供正常的服务或资源访问。<br>(4)重演攻击（或重放攻击)：攻击者通过截获含有身份鉴别信息或授权请求的有效消息，将该消息进行重演，以达到鉴别自身或获得授权的目的，实现对企业资源的访问。<br>(5)内部攻击：不具有相应权限的系统合法用户以非授权方式进行动作，如截获并存储其他业务部门的网络数据流，或对系统访问控制管理信息进行攻击以获得他人权限等。<br>(6)外部攻击：冒充为系统的授权用户或系统的组成部分、为鉴别或访问控制机制设置旁路等。<br>(7) Web安全攻击：攻击者通过跨站脚本或SQL注入等攻击手段，在电子商务平台系统网页中植入恶意代码或在表单中提交恶意SQL命令，从而旁路系统正常访问控制或恶意盗取用户信息。（电子商务平台、web平台）</p>
+<h4 id="19-基本安全性测试方法包括："><a href="#19-基本安全性测试方法包括：" class="headerlink" title="19.基本安全性测试方法包括："></a>19.基本安全性测试方法包括：</h4><p>(1) 功能验证：采用软件测试中的黑盒测试方法，对安全中心提供的密钥管理、加解密服务、认证服务以及授权服务进行功能测试，验证所提供的相应功能是否有效。<br>(2) 漏洞扫描：借助于特定的漏洞扫描工具，对安全中心本地主机、网络及相应功能模块进行扫描，发现系统中存在的安全性弱点及安全漏洞，从而在安全漏洞造成严重危害之前，发现并加以防范。<br>(3) 模拟攻击试验：模拟攻击试验是一组特殊的黑盒测试案例，通过模拟典型的安全攻击来验证安全中心的安全防护能力。<br>(4) 侦听测试：通过典型的网络数据包获取技术，在系统数据通信或数据交互的过程中，对数据进行截取分析，从而发现系统在防止敏感数据被窃取方面的安全防护能力。</p>
+<h4 id="20-安全防护策略："><a href="#20-安全防护策略：" class="headerlink" title="20.安全防护策略："></a>20.安全防护策略：</h4><p>安全防护策略是软件系统对抗攻击的主要手段，安全防护策略主要有安全日志、入侵检测、隔离防护、漏洞扫描等。<br>①安全日志：安全日志用于记录非法用户的登录名称、操作时间及内容等信息，以便发现问题并提出解决措施；安全日志仅记录相关信息，不对非法行为做出主动反应，属于被动防护的策略；<br>②入侵检测系统：入侵检测系统是一种主动的网络安全防护措施，从系统内部或各种网络资源中主动采集信息，从中分析可能的网络入侵或攻击，通常入侵检测系统还应对入侵行为做出紧急响应；<br>③漏洞扫描：漏洞扫描是对软件系统及网络系统进行与安全相关的检测，以找出安全隐患和可被黑客利用的漏洞；<br>④隔离防护：隔离防护是将系统中的安全部分与非安全部分进行隔离的措施，主要的技术手段有防火墙和隔离网闸等，其中防火墙主要用于内网和外网的逻辑隔离，而网闸则主要用于实现内网和外网的物理隔离。</p>
+<h4 id="21-安全系统防护体系："><a href="#21-安全系统防护体系：" class="headerlink" title="21.安全系统防护体系："></a>21.安全系统防护体系：</h4><p>①实体安全：基础设施的物理安全<br>②平台安全：网路平台、计算机操作系统、基本通用应用平台的安全<br>③数据安全：系统数据的机密性、完整性、访问控制和可恢复性<br>④通信安全：系统之间数据通信和会话访问不被非法侵犯<br>⑤应用安全：业务运行逻辑安全/业务资源的访问控制；业务交往的不可抵赖性/业务尸体的身份鉴别/业务数据的真是完整性<br>⑥运行安全：对系统安全性的动态维护和保障，控制由于时间推移和系统运行导致的安全性的变化<br>⑦管理安全：对相关的人员、技术和操作进行管理，总揽以上各安全要素并进行控制。</p>
+<h4 id="22-口令的安全保护措施："><a href="#22-口令的安全保护措施：" class="headerlink" title="22.口令的安全保护措施："></a>22.口令的安全保护措施：</h4><p>①口令强度：可设置最小口令长度，同时可采取要求用户在口令中使用非数字字母的字符等增加口令复杂度的手段提高口令强度。<br>②口令传输存储：可采用加密或Hashing手段，系统服务端存储的用户口令可加密或Hashing后存储，网络传输的用户口令可加密或Hashing后进行传输。<br>③口令管理：可设置最大口令时效强制用户定期更新口令，引入口令锁定机制以应对口令猜测攻击，引入口令历史强制用户设置新口令等。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/01/20190801/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1771,135 +1912,13 @@ driver.findElement(By.id(&quot;su&quot;)).click();
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/10/20190110Test1/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LY">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/10/20190110Test1/" itemprop="url">20190110Test1</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-10T15:14:26+08:00">
-                2019-01-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Markdown-语法和-MWeb-写作使用说明"><a href="#Markdown-语法和-MWeb-写作使用说明" class="headerlink" title="Markdown 语法和 MWeb 写作使用说明"></a>Markdown 语法和 MWeb 写作使用说明</h1><h2 id="Markdown-的设计哲学"><a href="#Markdown-的设计哲学" class="headerlink" title="Markdown 的设计哲学"></a>Markdown 的设计哲学</h2><blockquote>
-<p>Markdown 的目標是實現「易讀易寫」。<br>不過最需要強調的便是它的可讀性。一份使用 Markdown 格式撰寫的文件應該可以直接以純文字發佈，並且看起來不會像是由許多標籤或是格式指令所構成。<br>Markdown 的語法有個主要的目的：用來作為一種網路內容的<em>寫作</em>用語言。</p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/01/10/20190110Test1/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1943,7 +1962,7 @@ driver.findElement(By.id(&quot;su&quot;)).click();
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
